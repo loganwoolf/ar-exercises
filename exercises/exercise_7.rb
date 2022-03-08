@@ -10,3 +10,16 @@ puts "Exercise 7"
 puts "----------"
 
 # Your code goes here ...
+puts `clear`
+print "Enter a store name: > "
+store_name = $stdin.gets.chomp
+
+new_store = Store.new(
+  name: store_name
+)
+
+if !new_store.valid?
+  new_store.errors.full_messages.each{|msg| puts msg}
+else
+  new_store.save
+end
