@@ -7,29 +7,29 @@ puts "Exercise 4"
 puts "----------"
 
 # Your code goes here ...
-@store1 = Store.new do |loc|
+surrey = Store.new do |loc|
   loc.mens_apparel = false
   loc.womens_apparel = true
   loc.annual_revenue = 224000
   loc.name = "Surrey"
 end
-@store1.save
+surrey.save
 
-@store2 = Store.new do |loc|
+whistler = Store.new do |loc|
   loc.mens_apparel = true
   loc.womens_apparel = false
   loc.annual_revenue = 1900000
   loc.name = "Whistler"
 end
-@store2.save
+whistler.save
 
-@store3 = Store.new do |loc|
+yaletown = Store.new do |loc|
   loc.mens_apparel = true
   loc.womens_apparel = true
   loc.annual_revenue = 430000
   loc.name = "Yaletown"
 end
-@store3.save
+yaletown.save
 
 @mens_stores = Store.where(
   mens_apparel: true
